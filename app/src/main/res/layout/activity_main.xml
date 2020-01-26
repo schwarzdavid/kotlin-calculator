@@ -7,52 +7,52 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/previewText"
+        android:id="@+id/input_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/inputText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/inputText"
-        android:layout_width="0dp"
-        android:layout_height="75dp"
-        android:autoSizeMaxTextSize="50sp"
+        android:layout_height="0dp"
+        android:autoSizeMaxTextSize="40sp"
         android:autoSizeTextType="uniform"
         android:gravity="bottom|end"
-        android:maxLines="1"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="@string/default_input"
+        android:hyphenationFrequency="none"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/preview_text"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-16dp" />
+
+    <TextView
+        android:id="@+id/preview_text"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:autoSizeMaxTextSize="55sp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center_vertical|end"
+        android:padding="10dp"
+        android:text="@string/default_result"
         android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/Controls"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/controls" />
 
     <com.google.android.flexbox.FlexboxLayout
-        android:id="@+id/Controls"
+        android:id="@+id/controls"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:flexDirection="column"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <com.google.android.flexbox.FlexboxLayout
-            style="@style/AppTheme.Row">
+        <com.google.android.flexbox.FlexboxLayout style="@style/AppTheme.Row">
 
             <Button
-                style="@style/AppTheme.ActionBtn"
                 android:id="@+id/clear_all"
+                style="@style/AppTheme.ActionBtn"
                 android:text="AC" />
 
             <Button
+                android:id="@+id/open_bracket"
                 style="@style/AppTheme.ActionBtn"
-                android:tag="@string/type_bracket"
                 android:text="(" />
 
             <Button
+                android:id="@+id/close_bracket"
                 style="@style/AppTheme.ActionBtn"
-                android:tag="@string/type_bracket"
                 android:text=")" />
 
             <Button
@@ -62,8 +62,7 @@
 
         </com.google.android.flexbox.FlexboxLayout>
 
-        <com.google.android.flexbox.FlexboxLayout
-            style="@style/AppTheme.Row">
+        <com.google.android.flexbox.FlexboxLayout style="@style/AppTheme.Row">
 
             <Button
                 style="@style/AppTheme.NumBtn"
@@ -87,8 +86,7 @@
 
         </com.google.android.flexbox.FlexboxLayout>
 
-        <com.google.android.flexbox.FlexboxLayout
-            style="@style/AppTheme.Row">
+        <com.google.android.flexbox.FlexboxLayout style="@style/AppTheme.Row">
 
             <Button
                 style="@style/AppTheme.NumBtn"
@@ -112,8 +110,7 @@
 
         </com.google.android.flexbox.FlexboxLayout>
 
-        <com.google.android.flexbox.FlexboxLayout
-            style="@style/AppTheme.Row">
+        <com.google.android.flexbox.FlexboxLayout style="@style/AppTheme.Row">
 
             <Button
                 style="@style/AppTheme.NumBtn"
@@ -137,13 +134,11 @@
 
         </com.google.android.flexbox.FlexboxLayout>
 
-        <com.google.android.flexbox.FlexboxLayout
-            style="@style/AppTheme.Row">
+        <com.google.android.flexbox.FlexboxLayout style="@style/AppTheme.Row">
 
 
             <ImageButton
                 android:id="@+id/clear_one"
-
                 style="@style/AppTheme.ActionBtn"
                 android:src="@drawable/baseline_undo_black_24dp"
                 android:text="C" />
@@ -154,13 +149,13 @@
                 android:text="0" />
 
             <Button
-                style="@style/AppTheme.SpecialBtn"
                 android:id="@+id/comma"
+                style="@style/AppTheme.SpecialBtn"
                 android:text="." />
 
             <Button
-                style="@style/AppTheme.SpecialBtn"
                 android:id="@+id/equals"
+                style="@style/AppTheme.SpecialBtn"
                 android:text="=" />
 
         </com.google.android.flexbox.FlexboxLayout>

@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Calculator</string>
-    <string name="default_input">0</string>
+    <string name="default_result">0</string>
     <string name="type_number">type_number</string>
     <string name="type_operator">type_op</string>
-    <string name="type_bracket">type_bracket</string>
 </resources>

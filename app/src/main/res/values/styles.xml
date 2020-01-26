@@ -9,19 +9,18 @@
     </style>
 
     <style name="AppTheme.NumBtn" parent="Widget.AppCompat.Button.Borderless">
-        <item name="android:background">@color/colorLighter</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">70dp</item>
         <item name="android:textSize">32dp</item>
     </style>
 
     <style name="AppTheme.ActionBtn" parent="AppTheme.NumBtn">
-        <item name="android:background">@color/colorPrimary</item>
-        <item name="android:textColor">@color/colorLighter</item>
+        <item name="android:textColor">@color/colorPrimary</item>
     </style>
 
-    <style name="AppTheme.SpecialBtn" parent="AppTheme.NumBtn">
-        <item name="android:background">@color/colorLight</item>
+    <style name="AppTheme.EqBtn" parent="AppTheme.NumBtn">
+        <item name="android:textColor">@color/colorLighter</item>
+        <item name="android:background">@drawable/round_button</item>
     </style>
 
     <style name="AppTheme.Row">

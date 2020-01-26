@@ -4,17 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorLighter"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/input_text"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:autoSizeMaxTextSize="40sp"
+        android:autoSizeMaxTextSize="55sp"
         android:autoSizeTextType="uniform"
         android:gravity="bottom|end"
         android:hyphenationFrequency="none"
-        android:padding="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#FF000000"
         app:layout_constraintBottom_toTopOf="@+id/preview_text"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="-16dp" />
@@ -22,21 +25,32 @@
     <TextView
         android:id="@+id/preview_text"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="10dp"
         android:autoSizeMaxTextSize="55sp"
         android:autoSizeTextType="uniform"
         android:gravity="center_vertical|end"
-        android:padding="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:text="@string/default_result"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/controls" />
+        android:textColor="#FF000000"
+        app:layout_constraintBottom_toTopOf="@+id/divider" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/controls"
+        tools:layout_editor_absoluteX="1dp" />
 
     <com.google.android.flexbox.FlexboxLayout
         android:id="@+id/controls"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:flexDirection="column"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
 
         <com.google.android.flexbox.FlexboxLayout style="@style/AppTheme.Row">
 
@@ -136,12 +150,10 @@
 
         <com.google.android.flexbox.FlexboxLayout style="@style/AppTheme.Row">
 
-
             <ImageButton
                 android:id="@+id/clear_one"
                 style="@style/AppTheme.ActionBtn"
-                android:src="@drawable/baseline_undo_black_24dp"
-                android:text="C" />
+                android:src="@drawable/backspace_outline" />
 
             <Button
                 style="@style/AppTheme.NumBtn"
@@ -150,12 +162,13 @@
 
             <Button
                 android:id="@+id/comma"
-                style="@style/AppTheme.SpecialBtn"
+                style="@style/AppTheme.NumBtn"
                 android:text="." />
 
             <Button
                 android:id="@+id/equals"
-                style="@style/AppTheme.SpecialBtn"
+                style="@style/AppTheme.EqBtn"
+                android:background="@drawable/round_button"
                 android:text="=" />
 
         </com.google.android.flexbox.FlexboxLayout>

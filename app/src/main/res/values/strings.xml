@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Calculator</string>
+    <string name="app_name">FH Rechner</string>
     <string name="default_result">0</string>
     <string name="default_equal_text">=</string>
     <string name="type_number">type_number</string>

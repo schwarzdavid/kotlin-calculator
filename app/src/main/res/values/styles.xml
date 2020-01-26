@@ -1,7 +1,7 @@
 <resources xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -21,6 +21,7 @@
     <style name="AppTheme.EqBtn" parent="AppTheme.NumBtn">
         <item name="android:textColor">@color/colorLighter</item>
         <item name="android:background">@drawable/round_button</item>
+        <item name="android:width">50dp</item>
     </style>
 
     <style name="AppTheme.Row">
